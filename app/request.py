@@ -1,7 +1,7 @@
 """
 Request script.
 
-HuggingFace Inference API test.
+Test a request to the HuggingFace Inference API.
 
 Based on model card View Code sample here:
     https://huggingface.co/google/flan-t5-small
@@ -13,15 +13,15 @@ import requests
 
 
 TOKEN = os.getenv("TOKEN")
-MODEL = os.getenv("MODEL", "google/flan-t5-small")
+MODEL_ID = os.getenv("MODEL", "google/flan-t5-small")
 PROMPT = os.getenv("PROMPT", "The answer to the universe is")
 
-API_URL = f"https://api-inference.huggingface.co/models/{MODEL}"
+API_URL = f"https://api-inference.huggingface.co/models/{MODEL_ID}"
 HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
 
 def query(payload: dict) -> list[dict]:
-    response = requests.post(API_URL, headers=HEADERS, json=payload, timeout=2)
+    response = requests.post(API_URL, headers=HEADERS, json=payload)
 
     return response.json()
 
