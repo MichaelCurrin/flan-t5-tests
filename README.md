@@ -49,7 +49,9 @@ TOKEN=hf_ABCD1234
 
 ## Usage
 
-Run a script. The required model will be downloaded and used for inference.
+### CLI
+
+Run a script in the [app](/app/) directory. The required model will be downloaded and used for inference.
 
 ```sh
 $ cd app
@@ -62,7 +64,13 @@ For `request.py`, load the token in your environment first:
 $ source .env
 ```
 
-For the web app, start a static HTTP server in the [public](/public/) directory. Note that on the small and even the large model, the results are not so good and can be sensitive to wording and case (e.g. giving English results when asking for German, and not handling other languages).
+### Web app
+
+For the web app, start a static HTTP server in the [public](/public/) directory.
+
+![sample image](/sample.png)
+
+Note that on the small and even the large model, the results are not so good and can be sensitive to wording and case (e.g. giving English results when asking for German, and not handling other languages, or getting a response to a question in German instead of translating the input).
 
 ## Model notes
 
