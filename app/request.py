@@ -1,4 +1,7 @@
 """
+Request script.
+
+HuggingFace Inference API test.
 
 Based on model card View Code sample here:
     https://huggingface.co/google/flan-t5-small
