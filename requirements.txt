@@ -1,0 +1,10 @@
+transformers~=4.44.2
+
+# cpu
+sentencepiece
+
+# gpu
+accelerate
+
+mypy
+typing_extensions~=4.12.2
