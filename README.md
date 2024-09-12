@@ -1,5 +1,5 @@
 # FLAN-T5 tests
-> Test how to run the FLAN-T5 transformer models locally
+> Test how to run the FLAN-T5 transformer models locally with Python and on a webpage
 
 [![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
 [![OS - macOS](https://img.shields.io/badge/OS-macOS-blue?logo=apple&logoColor=white)](https://www.apple.com/macos/ "Go to Apple homepage")
