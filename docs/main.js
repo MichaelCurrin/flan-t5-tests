@@ -3,7 +3,8 @@ const BASE_URL = "https://api-inference.huggingface.co/models"
 async function query(payload, token, modelId) {
   console.log("Requesting API")
 
-  const response = await fetch(`${BASE_URL}/${modelId}`, {
+  const url = `${BASE_URL}/${modelId}`
+  const response = await fetch(url, {
     headers: {
       "Authorization": `Bearer ${token}`,
       "Content-Type": "application/json",
