@@ -8,13 +8,25 @@ This project is based on models listed on the [FLAN-T5](https://huggingface.co/d
 
 ## Installation
 
-Install in a Python virtual environment:
+### Setup virtual environment
 
-```sh
-$ pip install -r requirements.txt
-```
+1. Install Python 3.
+1. Create a virtual environment and activate it.
+    ```sh
+    $ python3 -m venv
+    $ source venv/bin/activate
+    ```
+1. Install packages and also dev packages if you care about Mypy typechecking:
+    ```sh
+    $ pip install -r requirements.txt
+    $ pip install -r requirements-dev.txt
+    ```
 
-For the case of `request.py`, it requests the HuggingFace Inference API. Create a token on your HuggingFace account and add to a local unversioned config as `.env`. e.g.
+Currently, `transformers` doesn't seem to have a typing package available so it is ignored in this project in the Mypy config.
+
+### Setup dotenv file
+
+For the case of `request.py`, that requests the HuggingFace Inference API. Create a token on your HuggingFace account and add to a local unversioned config as `.env`. e.g.
 
 ```bash
 TOKEN=hf_ABCD1234
@@ -22,9 +34,10 @@ TOKEN=hf_ABCD1234
 
 ## Usage
 
-Run a script and then the model will be downloaded and used for inference.
+Run a script. The required model will be downloaded and used for inference.
 
 ```sh
+$ cd app
 $ python SCRIPT_PATH
 ```
 
