@@ -1,6 +1,10 @@
 # FLAN-T5 tests
 > Test how to run the FLAN-T5 transformer models locally
 
+[![OS - Linux](https://img.shields.io/badge/OS-Linux-blue?logo=linux&logoColor=white)](https://www.linux.org/ "Go to Linux homepage")
+[![OS - macOS](https://img.shields.io/badge/OS-macOS-blue?logo=apple&logoColor=white)](https://www.apple.com/macos/ "Go to Apple homepage")
+[![Made with Python](https://img.shields.io/badge/Python->=3.10-blue?logo=python&logoColor=white)](https://python.org "Go to Python homepage")
+
 If you want to use Python to perform tasks like summarize or translate text, you don't have to setup an LLM and have it running as a server. You can simply use a transformer. FLAN-T5 is one of the popular ones.
 
 This project is based on models listed on the [FLAN-T5](https://huggingface.co/docs/transformers/main/en/model_doc/flan-t5) model doc on HuggingFace and using the code samples for each.
