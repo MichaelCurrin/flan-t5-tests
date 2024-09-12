@@ -10,6 +10,15 @@ If you want to use Python to perform tasks like summarize or translate text, you
 This project is based on models listed on the [FLAN-T5](https://huggingface.co/docs/transformers/main/en/model_doc/flan-t5) model doc on HuggingFace and using the code samples for each.
 
 
+## About the HuggingFace Inference API
+
+For the case of `request.py`, that requests the HuggingFace Inference API instead of running against a local model.
+
+If you use existing models rather than custom ones, you do not need to setup billing. It just works easily on the free tier. See the [Inference API doc](https://huggingface.co/docs/api-inference/index) on features.
+
+The limits are vague on the Pricing page. But at least you can your usage - go to HuggingFace, Solutions, then Inference Endpoints.
+
+
 ## Installation
 
 ### Setup virtual environment
@@ -30,13 +39,13 @@ Currently, `transformers` doesn't seem to have a typing package available so it 
 
 ### Setup dotenv file
 
-For the case of `request.py`, that requests the HuggingFace Inference API. Create a token on your HuggingFace account and add to a local unversioned config as `.env`. e.g.
+For `request.py`, create a token on your HuggingFace account and add it to a local unversioned config as `.env`.
+
+e.g.
 
 ```bash
 TOKEN=hf_ABCD1234
 ```
-
-If you use existing models rather than custom ones, you do not need to setup billing. There will be a limit to your requests though. To see usage, go to HuggingFace, Solutions, then Inference Endpoints.
 
 ## Usage
 
@@ -47,7 +56,7 @@ $ cd app
 $ python SCRIPT_PATH
 ```
 
-For the case of `request.py`, load the token in your environment first:
+For `request.py`, load the token in your environment first:
 
 ```sh
 $ source .env
