@@ -1,6 +1,8 @@
 const BASE_URL = "https://api-inference.huggingface.co/models"
 
 async function query(payload, token, modelId) {
+  console.log("Requesting API")
+
   const response = await fetch(`${BASE_URL}/${modelId}`, {
     headers: {
       "Authorization": `Bearer ${token}`,
@@ -9,6 +11,7 @@ async function query(payload, token, modelId) {
     method: "POST",
     body: JSON.stringify(payload),
   });
+
   return await response.json();
 }
 
@@ -20,6 +23,7 @@ function storeInputs(token, modelId, prompt) {
 }
 
 function loadStoredInputs() {
+  console.log('Setting form inputs from local storage')
   const storedToken = localStorage.getItem('huggingFaceToken');
   const storedModelId = localStorage.getItem('huggingFaceModelId');
   const storedPrompt = localStorage.getItem('huggingFacePrompt');
@@ -38,7 +42,7 @@ function loadStoredInputs() {
 function displayResponse(response) {
   const responseElement = document.getElementById('response');
 
-  console.log(response)
+  console.debug(response)
 
   if (!(response)) {
     responseElement.textContent = "ERROR: No response received.";
