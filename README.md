@@ -70,6 +70,8 @@ Start a static HTTP server in the [docs](/docs/) directory. This is named as suc
 
 Then open the page in your browser.
 
+Enter your details and submit. Note that the values are stored in localstorage so they can be persisted. For security, your token will **not** be logged or sent anywhere except to the HuggingFace API.
+
 ![sample image](/sample.png)
 
 Note that on the small and even the large model, the results are not so good and can be sensitive, while the CLI options seemed more realistic. Some problems I found: giving English results when asking for German, getting a response to a question in German instead of translating the input, and changing the initial letter of the content to a lowercase where uppercase was useless in the response.
