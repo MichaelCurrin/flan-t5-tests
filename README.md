@@ -62,7 +62,7 @@ For `request.py`, load the token in your environment first:
 $ source .env
 ```
 
-For the web app, start a static HTTP server in the [public](/public/) directory.
+For the web app, start a static HTTP server in the [public](/public/) directory. Note that on the small and even the large model, the results are not so good and can be sensitive to wording and case (e.g. giving English results when asking for German, and not handling other languages).
 
 ## Model notes
 
