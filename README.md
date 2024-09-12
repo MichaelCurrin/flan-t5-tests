@@ -62,6 +62,8 @@ For `request.py`, load the token in your environment first:
 $ source .env
 ```
 
+For the web app, start a static HTTP server in the [public](/public/) directory.
+
 ## Model notes
 
 ### Sizes
