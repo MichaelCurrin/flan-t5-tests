@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugging Face API Request</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script async src="main.js"></script>
+</head>
+
+<body>
+    <h1>Hugging Face API Request</h1>
+
+    <form id="apiForm">
+        <label for="token">Hugging Face API Token:</label>
+        <input type="text" id="token" placeholder="Enter your HuggingFace API token" required>
+
+        <label for="modelId">Model ID:</label>
+        <input type="text" id="modelId" placeholder="e.g. google/flan-t5-small"
+            value="google/flan-t5-small" required>
+
+        <label for="prompt">Prompt:</label>
+        <input type="text" id="prompt"
+            placeholder="e.g. translate English to German: Hello, how are you doing today?"
+            value="translate English to German: Hello, how are you doing today?" required>
+
+        <button type="submit" id="requestButton">Submit</button>
+    </form>
+
+    <h2>Response:</h2>
+    <div id="response"></div>
+
+</body>
+
+</html>
