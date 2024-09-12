@@ -36,6 +36,8 @@ For the case of `request.py`, that requests the HuggingFace Inference API. Creat
 TOKEN=hf_ABCD1234
 ```
 
+If you use existing models rather than custom ones, you do not need to setup billing. There will be a limit to your requests though. To see usage, go to HuggingFace, Solutions, then Inference Endpoints.
+
 ## Usage
 
 Run a script. The required model will be downloaded and used for inference.
@@ -50,7 +52,6 @@ For the case of `request.py`, load the token in your environment first:
 ```sh
 $ source .env
 ```
-
 
 ## Model notes
 
