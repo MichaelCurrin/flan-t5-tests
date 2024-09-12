@@ -59,7 +59,7 @@ function displayResponse(response) {
 }
 
 
-document.getElementById('apiForm').addEventListener('submit', async (event) => {
+document.getElementById('form').addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const token = document.getElementById('token').value;
