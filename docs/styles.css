@@ -13,12 +13,18 @@ body {
 
 label {
   margin-right: 10px;
-  width: 150px;
+  width: 100px;
 }
 
 input {
   flex: 1;
   padding: 5px;
+}
+
+textarea {
+  flex: 1;
+  padding: 5px;
+  resize: vertical;
 }
 
 button {
@@ -28,16 +34,10 @@ button {
   cursor: pointer;
 }
 
+
+
 #response {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
-}
-
-textarea {
-  flex: 1;
-  padding: 5px;
-  /* Padding for textarea */
-  resize: vertical;
-  /* Allow vertical resizing */
 }

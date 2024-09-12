@@ -21,11 +21,30 @@
                 alt="MichaelCurrin - flan-t5-tests"></a>
     </div>
 
-    <br />
+    <h2>About</h2>
+    <p>
+        To use this form:
+    </p>
+
+    <ol>
+        <li>Go to the HuggingFace website: <a href="https://huggingface.co/">huggingface.co</a>.
+        </li>
+        <li>Sign in to your account.</li>
+        <li>Create a token by navigating to the Profile icon.</li>
+        <li>Select Settings.</li>
+        <li>Click on Access Tokens.</li>
+        <li>Paste the token below.</li>
+    </ol>
+    <p>
+        Your form inputs are persisted in localstorage for convenience. But your secret token is
+        still <b>secure</b> as it is not stored anywhere except in your own browser.
+    </p>
+
+    <h2>Inputs</h2>
 
     <form id="form">
         <div class="form-group">
-            <label for="token">HuggingFace Token:</label>
+            <label for="token">Token:</label>
             <input id="token" type="password" name="password"
                 placeholder="Enter your secret API token" required>
         </div>
@@ -46,7 +65,7 @@
         </div>
     </form>
 
-    <h2>Response:</h2>
+    <h2>Result</h2>
     <div id="response"></div>
 
 </body>
