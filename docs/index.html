@@ -1,46 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hugging Face API Request</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HuggingFace Requests</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="main.js"></script>
 </head>
 
 <body>
-    <h1>HuggingFace Request</h1>
+    <h1>HuggingFace Requests</h1>
 
-    <p><i>Test how to run the FLAN-T5 transformer models</i></p>
+    <p>
+        <i>Send requests to HuggingFace models hosted on their Inference
+            API</i>
+    </p>
 
     <div>
         <a href="https://github.com/MichaelCurrin/flan-t5-tests" title="Go to GitHub repo"><img
                 src="https://img.shields.io/static/v1?label=MichaelCurrin&message=flan-t5-tests&color=blue&logo=github"
-                alt="MichaelCurrin - flan-t5-tests"></a>
+                alt="MichaelCurrin - flan-t5-tests" /></a>
     </div>
-
-    <h2>Instructions</h2>
-    <p>
-        To use this form, you need a HuggingFace account and API token. Follow the instructions
-        below and see the HuggingFace <a href="https://huggingface.co/docs/hub/security-tokens
-">tokens</a> documenation for more info.</p>
-
-    <ol>
-        <li>Go to the HuggingFace website: <a href="https://huggingface.co/">huggingface.co</a>.
-        </li>
-        <li>Sign in to your account.</li>
-        <li>Navigate to the Profile icon.</li>
-        <li>Select Settings.</li>
-        <li>Click on Access Tokens.</li>
-        <li>Create a token - "readonly" access is sufficient</li>
-        <li>Copy and paste the token below.</li>
-    </ol>
-    <p>
-        Your form inputs are persisted in localstorage for convenience. But your secret token is
-        still <b>secure</b> as it is not stored anywhere except in your own browser.
-    </p>
 
     <h2>Inputs</h2>
 
@@ -48,18 +30,19 @@
         <div class="form-group">
             <label for="token">Token:</label>
             <input id="token" type="password" name="password"
-                placeholder="Enter your secret API token" required>
+                placeholder="Enter your secret API token" required />
         </div>
         <div class="form-group">
             <label for="modelId">Model ID:</label>
             <input type="text" id="modelId" placeholder="e.g. google/flan-t5-small"
-                value="google/flan-t5-small" required>
+                value="google/flan-t5-small" required />
         </div>
         <div class="form-group">
             <label for="prompt">Prompt:</label>
             <textarea id="prompt"
                 placeholder="e.g. translate English to German: Hello, how are you doing today?"
-                required>translate English to German: Hello, how are you doing today?</textarea>
+                required>
+translate English to German: Hello, how are you doing today?</textarea>
         </div>
 
         <div>
@@ -70,6 +53,49 @@
     <h2>Result</h2>
     <div id="response"></div>
 
+    <h2>Instructions</h2>
+    <p>
+        To use this form, you need a HuggingFace account and API token. You
+        can use the free tier (within limits) and do not need to enter
+        billing details.
+    </p>
+    <p>
+        Follow the instructions below and see the HuggingFace
+        <a href="https://huggingface.co/docs/hub/security-tokens
+">tokens</a>
+        documentation for more help if needed.
+    </p>
+
+    <ol>
+        <li>
+            Go to the HuggingFace website:
+            <a href="https://huggingface.co/">huggingface.co</a>.
+        </li>
+        <li>Sign in to your account.</li>
+        <li>Navigate to the Profile icon.</li>
+        <li>Select Settings.</li>
+        <li>Click on Access Tokens.</li>
+        <li>Create a token - "readonly" access is sufficient</li>
+        <li>Copy and paste the token into the for below.</li>
+    </ol>
+    <p>
+        Note: Your form inputs are persisted in localstorage for
+        convenience. But your secret token is still <b>secure</b> as it is
+        not stored anywhere except in your own browser.
+    </p>
+
+    <h2>Notes</h2>
+    <p>
+        The FLAN-5 model as used in the default setup is one of the popular
+        recent "transformer" models that supports text to text tasks. It can
+        handle tasks like summarization and text translation but may not be
+        suited to a certain tasks or being a chatbot.
+    </p>
+    <p>
+        Tip: as an alternative, try the "-large" model or other text to text
+        generation models on the Models section of HuggingFace. If you try
+        another kind of model, the code on this page will fail to run it.
+    </p>
 </body>
 
 </html>
