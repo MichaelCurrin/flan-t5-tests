@@ -21,7 +21,8 @@ HEADERS = {"Authorization": f"Bearer {TOKEN}"}
 
 
 def query(payload: dict) -> list[dict]:
-    response = requests.post(API_URL, headers=HEADERS, json=payload)
+    response = requests.post(API_URL, headers=HEADERS, json=payload, timeout=2)
+
     return response.json()
 
 
