@@ -66,11 +66,13 @@ $ source .env
 
 ### Web app
 
-For the web app, start a static HTTP server in the [public](/public/) directory.
+Start a static HTTP server in the [docs](/docs/) directory. This is named as such to deploy it on GitHub Pages.
+
+Then open the page in your browser.
 
 ![sample image](/sample.png)
 
-Note that on the small and even the large model, the results are not so good and can be sensitive to wording and case (e.g. giving English results when asking for German, and not handling other languages, or getting a response to a question in German instead of translating the input).
+Note that on the small and even the large model, the results are not so good and can be sensitive, while the CLI options seemed more realistic. Some problems I found: giving English results when asking for German, getting a response to a question in German instead of translating the input, and changing the initial letter of the content to a lowercase where uppercase was useless in the response.
 
 ## Model notes
 
