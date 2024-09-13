@@ -71,28 +71,31 @@ translate English to German: Hello, how are you doing today?</textarea>
             Go to the HuggingFace website:
             <a href="https://huggingface.co/">huggingface.co</a>.
         </li>
-        <li>Sign in to your account.</li>
-        <li>Navigate to the Profile icon.</li>
+        <li>Sign in</li>
+        <li>Click the Profile icon.</li>
         <li>Select Settings.</li>
         <li>Click on Access Tokens.</li>
         <li>Create a token - "readonly" access is sufficient</li>
-        <li>Copy and paste the token into the for below.</li>
+        <li>Copy and paste the token into the form.</li>
+        <li>Enter a model and prompt and submit</li>
     </ol>
     <p>
-        Note: Your form inputs are persisted in localstorage for
+        🔐 Your form inputs are persisted in localstorage for
         convenience. But your secret token is still <b>secure</b> as it is
         not stored anywhere except in your own browser.
     </p>
 
     <h2>Notes</h2>
     <p>
-        The FLAN-5 model as used in the default setup is one of the popular
+        ℹ️ The FLAN-5 model as used in the default setup is one of the popular
         recent "transformer" models that supports text to text tasks. It can
-        handle tasks like summarization and text translation but may not be
-        suited to a certain tasks or being a chatbot.
+        handle tasks like summarization and language translation but may not be
+        suited to a certain tasks and is not a chatbots or LLM.
     </p>
+    <p>⚠️ The Inference API takes a few seconds to warm up if it is not already active. So if you get an error
+    around that, wait and try again.</p>
     <p>
-        Tip: as an alternative, try the "-large" model or other text to text
+        ℹ️ As an alternative model to the default, try the "-large" model or other text to text
         generation models on the Models section of HuggingFace. If you try
         another kind of model, the code on this page will fail to run it.
     </p>
